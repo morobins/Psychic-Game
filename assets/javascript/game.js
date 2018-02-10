@@ -13,11 +13,20 @@
     var wins = 0;
     var losses = 0;
     var guessesLeft = 10;
+    var yourGuess = [];
+
+    // Reset Game
+    var reset = function() {
+      guessesLeft = 10;
+      yourGuess = [];
+    }
 
     // Whenever a key is pressed, alert "pressed a button".
     document.onkeyup = function(event) {
       // Capture user's guess
-      var yourGuess = event.key.toLowerCase();
+      var userGuess = event.key.toLowerCase();
+
+      yourGuess.push(userGuess);
   
 
       // Generate a computer choice at random
@@ -39,14 +48,18 @@
       //     losses++;
       //   } else if ((userGuess === "p") && (computerGuess === "r")) {
       //     wins++;
+
+      //Set condition for wins and reset
         if (yourGuess === computerGuess) {
           wins++;
+          reset();
         } else {
           guessesLeft--;
         } 
 
         if (guessesLeft === 0) {
           losses++;
+          reset();
         }
 
         // Write results to HTML
