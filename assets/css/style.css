@@ -1,0 +1,21 @@
+body {
+  background-image: url("../images/darkness.png");
+  color: whitesmoke;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 30px;
+  color: rgb(133, 212, 14);
+}
+
+h1:hover {
+  transform: rotateY(180deg);
+  color: rgb(219, 10, 10);
+}
+
+p {
+  font-family: 'Gudea', sans-serif;
+}
+

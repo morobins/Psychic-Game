@@ -49,6 +49,9 @@
       //   } else if ((userGuess === "p") && (computerGuess === "r")) {
       //     wins++;
 
+      //call on the contents of the array to only allow those letters to be pressed
+      // if (yourGuess !== choices.valueOf()) 
+
       //Set condition for wins and reset
         if (yourGuess === computerGuess) {
           wins++;
@@ -62,6 +65,19 @@
           reset();
         }
 
+
+
+        //restrict only to letters
+        // if (choicesIndex < 0) {
+        //   console.log("That is not a letter");
+        // }
+
+        // else {
+        //   (userGuess !== choices.keys()) 
+        //   alert("You suck!");
+        // }
+        
+
         // Write results to HTML
         yourGuessHTML.textContent = yourGuess;
         // computerGuessHTML.textContent = computerGuess;
@@ -73,7 +89,10 @@
       // } else {
       //   alert("you don't know how to play rock paper scissors");
       // }
-
+      // } else {
+      //   alert("You suck!");
+      // }
+      
       
 
     };
