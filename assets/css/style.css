@@ -15,6 +15,10 @@ h1:hover {
   color: rgb(219, 10, 10);
 }
 
+img {
+  margin-bottom: 50px;
+}
+
 p {
   font-family: 'Gudea', sans-serif;
 }
