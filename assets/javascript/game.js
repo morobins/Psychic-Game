@@ -1,6 +1,5 @@
     // Grab DOM/HTML Elements and store in variables
     var yourGuessHTML = document.getElementById('your-guess');
-    // var computerGuessHTML = document.getElementById('computer-guess');
     var winsHTML = document.getElementById('wins');
     var lossesHTML = document.getElementById('losses');
     var guessesLeftHTML = document.getElementById('guesses-left'); 
@@ -37,28 +36,6 @@
       console.log("Your letter was added");
   
 
-
-
-      // // Check user's guess against computer's choice with if/else statements
-      // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
-      //   // Let's run the rest of the game
-
-      //   if ((userGuess === "r") && (computerGuess === "s")) {
-      //     wins++;
-      //   } else if ((userGuess === "r") && (computerGuess === "p")) {
-      //     losses++;
-      //   } else if ((userGuess === "s") && (computerGuess === "r")) {
-      //     losses++;
-      //   } else if ((userGuess === "s") && (computerGuess === "p")) {
-      //     wins++;
-      //   } else if ((userGuess === "p") && (computerGuess === "s")) {
-      //     losses++;
-      //   } else if ((userGuess === "p") && (computerGuess === "r")) {
-      //     wins++;
-
-      //call on the contents of the array to only allow those letters to be pressed
-      // if (yourGuess !== choices.valueOf()) 
-
       //Set condition for wins and reset
         if (userGuess === computerGuess) {
           wins++;
@@ -87,18 +64,9 @@
 
         // Write results to HTML
         yourGuessHTML.textContent = yourGuess;
-        // computerGuessHTML.textContent = computerGuess;
         winsHTML.textContent = wins;
         lossesHTML.textContent = losses;
-        // tiesHTML.textContent = ties;
         guessesLeftHTML.textContent = guessesLeft;
-
-      // } else {
-      //   alert("you don't know how to play rock paper scissors");
-      // }
-      // } else {
-      //   alert("You suck!");
-      // }
       
       
 
