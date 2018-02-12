@@ -15,22 +15,29 @@
     var guessesLeft = 10;
     var yourGuess = [];
 
+    // Generate a computer choice at random
+    var computerGuess = choices[Math.floor(Math.random() * choices.length)];
+      console.log("The Computer guess is " + computerGuess);
+
     // Reset Game
     var reset = function() {
       guessesLeft = 10;
       yourGuess = [];
+      computerGuess = choices[Math.floor(Math.random() * choices.length)];
+      console.log("The New Computer guess is " + computerGuess);
     }
 
     // Whenever a key is pressed, alert "pressed a button".
     document.onkeyup = function(event) {
       // Capture user's guess
       var userGuess = event.key.toLowerCase();
+        console.log(userGuess);
 
       yourGuess.push(userGuess);
+      console.log("Your letter was added");
   
 
-      // Generate a computer choice at random
-      var computerGuess = choices[Math.floor(Math.random() * choices.length)];
+
 
       // // Check user's guess against computer's choice with if/else statements
       // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
@@ -53,7 +60,7 @@
       // if (yourGuess !== choices.valueOf()) 
 
       //Set condition for wins and reset
-        if (yourGuess === computerGuess) {
+        if (userGuess === computerGuess) {
           wins++;
           reset();
         } else {
