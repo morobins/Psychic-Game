@@ -32,8 +32,11 @@
       var userGuess = event.key.toLowerCase();
         console.log(userGuess);
 
-      yourGuess.push(userGuess);
-      console.log("Your letter was added");
+      //Make sure only letters can be pressed
+      for (var i = 0; i < choices.length; i++ ) {
+        if (userGuess.toLowerCase() === choices[i]) {
+          yourGuess.push(userGuess);
+          console.log("Your letter was added");
   
 
       //Set condition for wins and reset
@@ -68,6 +71,7 @@
         lossesHTML.textContent = losses;
         guessesLeftHTML.textContent = guessesLeft;
       
-      
+      }
+    }
 
     };
